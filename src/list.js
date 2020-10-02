@@ -3,12 +3,6 @@ const { Keyboard, StepScene } = require('aitu')
 
 const Reminder = require('./models/Reminder')
 
-const params = {
-  keyboard: Keyboard.keyboard([
-    '/cancel'
-  ])
-}
-
 module.exports = new StepScene('list', [
   async ctx => {
     const n = Number(ctx.text)
@@ -21,7 +15,7 @@ module.exports = new StepScene('list', [
         return ctx.scene.leave()
       }
 
-      if (ctx.scene.step.firstTime) ctx.send('Все ваши напоминания:', params)
+      if (ctx.scene.step.firstTime) ctx.send('Все ваши напоминания:')
 
       let list = ''
       reminders.forEach((e, i) => (list += `${i + 1}. ${e.note}\n`))
