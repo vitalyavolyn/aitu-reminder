@@ -1,0 +1,4 @@
+exports.googleMapsKey = ''
+exports.token = ''
+exports.connectionString = 'mongodb://localhost/aitu-reminder'
+exports.dialogflowId = 'agent-id'
